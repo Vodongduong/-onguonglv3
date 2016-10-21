@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <conio.h>
+void nhapmang (int a[][10], int dong, int cot)
+{
+    int i, j;
+    for (i=0; i<dong; i++)
+    {
+        for (j=0; j<cot; j++)
+            printf ("\na[%d][%d]", i, j);
+        scanf ("%d", &a[i][j]);
+    }
+}
+int main ()
+{
+    int a[10][10];
+    int cot, dong, i, j;
+    do
+    {
+        printf ("\nNhap so cot : ");
+        scanf ("%d", &cot);
+        if (cot <1 || cot >10)
+            printf ("\nBan nhap khong hop le :");
+    }
+    while (cot <1 || cot >10);
+    do
+    {
+        printf ("\nNhap so dong : ");
+        scanf ("%d", &dong);
+        if (dong <1 || dong >10)
+            printf ("\nBan nhap khong hop le :");
+    }
+    while (dong <1 || dong >10);
+    nhapmang (a,dong, cot);
+int    Max = a[0][0];
+    if ( a[i][j]> Max)
+    {
+    Max = a[i][j];
+}
+        printf ("gia tri lon nhat la %d", Max);
+    return 0;
+}
